@@ -1,7 +1,3 @@
-'use strict';
-
-importScripts('serviceworker-cache-polyfill.js');
-
 var cacheName = 'staticPWA-v1';
 
 self.addEventListener('install', function(e) {
@@ -20,9 +16,9 @@ self.addEventListener('install', function(e) {
         '/images/thumbs/05.jpg',
         '/images/thumbs/06.jpg',
         '/images/thumbs/07.jpg',
-        '/images/thumbs/08.jpg',
-        '/images/favicon-32x32.png'
+        '/images/thumbs/08.jpg'
       ]);
+      console.log("DONE");
     })
   );
 });
