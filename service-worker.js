@@ -23,7 +23,20 @@ self.addEventListener('install', function(e) {
   e.waitUntil(
     caches.open(cacheName).then(function(cache) {
       console.log('[ServiceWorker] Caching app shell');
-      return cache.addAll(filesToCache);
+      return cache.addAll([
+        '/',
+        '/index.html',
+        '/assets/css/main.css',
+        '/assets/images/thumbs/01.jpg',
+        '/assets/images/thumbs/02.jpg',
+        '/assets/images/thumbs/03.jpg',
+        '/assets/images/thumbs/04.jpg',
+        '/assets/images/thumbs/05.jpg',
+        '/assets/images/thumbs/06.jpg',
+        '/assets/images/thumbs/07.jpg',
+        '/assets/images/thumbs/08.jpg',
+        '/assets/images/favicon-32x32.png'
+      ]);
     })
   );
 });
