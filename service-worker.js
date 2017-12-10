@@ -16,15 +16,11 @@ var filesToCache = [
 self.addEventListener('install', function(event) {
   console.log('[ServiceWorker] Install');
   event.waitUntil(
-    if ('caches' in window) {
-      caches.open(cacheName).then(function(cache) {
-        console.log('[ServiceWorker] Caching app shell');
-        return cache.addAll(filesToCache);
-        console.log("DONE");
-      })
-    } else {
-      console.log("cache not available");
-    }
+    caches.open(cacheName).then(function(cache) {
+      console.log('[ServiceWorker] Caching app shell');
+      return cache.addAll(filesToCache);
+      console.log("DONE");
+    })
   );
 });
 
