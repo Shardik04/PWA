@@ -7,14 +7,14 @@ var filesToCache = [
   '/',
   '/index.html',
   '/assets/css/main.css',
-  '/assets/images/thumbs/01.jpg',
-  '/assets/images/thumbs/02.jpg',
-  '/assets/images/thumbs/03.jpg',
-  '/assets/images/thumbs/04.jpg',
-  '/assets/images/thumbs/05.jpg',
-  '/assets/images/thumbs/06.jpg',
-  '/assets/images/thumbs/07.jpg',
-  '/assets/images/thumbs/08.jpg'
+  'images/thumbs/01.jpg',
+  'images/thumbs/02.jpg',
+  'images/thumbs/03.jpg',
+  'images/thumbs/04.jpg',
+  'images/thumbs/05.jpg',
+  'images/thumbs/06.jpg',
+  'images/thumbs/07.jpg',
+  'images/thumbs/08.jpg'
 ];
 
 self.addEventListener('install', function(e) {
