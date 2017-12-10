@@ -16,7 +16,16 @@
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	<link rel="manifest" href="/manifest.json">
-	<meta name="theme-color" content="#1f2224">
+	<meta name="theme-color" content='#1f2224'>
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker
+				.register('./service-worker.js')
+				.then(function() {
+					console.log('Service Worker Registered');
+				});
+		}
+	</script>
 </head>
 
 <body>
@@ -156,5 +165,8 @@
 	<script src="assets/js/main.js"></script>
 
 </body>
+
+</html>
+
 
 </html>
