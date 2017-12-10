@@ -19,9 +19,6 @@ self.addEventListener('install', function(event) {
         '/images/thumbs/08.jpg'
       ]);
       console.log("DONE");
-    }).catch(function(error) {
-      // registration failed
-      console.log('cache failed with ' + error);
     });
   );
 });
