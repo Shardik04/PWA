@@ -1,0 +1,16 @@
+{
+  "name": "Multiverse by HTML5 UP",
+  "short_name": "Multiverse",
+  "description": "Web Community Leaders landing page",
+  "lang": "en-GB",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1f2224",
+  "background_color": "#1f2224",
+
+  "icons": [{
+    "src": "\/images/wcls-logo-512.png",
+    "sizes": "512x512",
+    "type": "image\/png"
+  }]
+}
