@@ -1,12 +1,12 @@
 var cacheName = 'staticPWA';
-var filesToCache = [
-  '/',
-  '/index.html',
-  '/assets/css',
-  '/assets/fonts',
-  '/assets/sass',
-  '/assets/images'
-];
+// var filesToCache = [
+//   '/',
+//   '/index.html',
+//   '/assets/css',
+//   '/assets/fonts',
+//   '/assets/sass',
+//   '/assets/images'
+// ];
 
 function cacheAssets() {
   return caches.open(cacheName)
@@ -14,9 +14,8 @@ function cacheAssets() {
       return cache.addAll([
         '/',
         '/index.html',
-        '/assets/css',
+        '/assets/css/main.css',
         '/assets/fonts',
-        '/assets/sass',
         '/assets/images'
       ]);
     });
@@ -27,21 +26,6 @@ self.addEventListener('install', function(e) {
   e.waitUntil(
     cacheAssets()
   );
-});
-
-self.addEventListener('activate', function(e) {
-  console.log('[ServiceWorker] Activate');
-  e.waitUntil(
-    caches.keys().then(function(keyList) {
-      return Promise.all(keyList.map(function(key) {
-        if (key !== cacheName) {
-          console.log('[ServiceWorker] Removing old cache', key);
-          return caches.delete(key);
-        }
-      }));
-    })
-  );
-  return self.clients.claim();
 });
 
 self.addEventListener('fetch', function(e) {
