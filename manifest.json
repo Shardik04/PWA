@@ -1,9 +1,9 @@
 {
   "name": "Multiverse by HTML5 UP",
   "short_name": "Multiverse",
-  "description": "Web Community Leaders landing page",
-  "lang": "en-GB",
-  "start_url": "/",
+  "description": "Multiverse by HTML5 templates",
+  "lang": "en-US",
+  "start_url": "https://hardikshah91.github.io/PWA/",
   "display": "standalone",
   "theme_color": "#1f2224",
   "background_color": "#1f2224",
