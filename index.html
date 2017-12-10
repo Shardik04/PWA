@@ -7,13 +7,22 @@
 <html>
 
 <head>
-	<title>Multiverse by HTML5 UP</title>
 	<meta charset="utf-8" />
-	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<script>
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', function() {
+				navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+					// Registration was successful
+					console.log('ServiceWorker registration successful with scope: ', registration.scope);
+				}, function(err) {
+					// registration failed :(
+					console.log('ServiceWorker registration failed: ', err);
+				});
+			});
+		}
+	</script>
+	<title>Multiverse by HTML5 UP</title>
+
 	<link rel="manifest" href="manifest.json">
 
 	<meta name="mobile-web-app-capable" content="yes">
@@ -25,15 +34,9 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="msapplication-starturl" content="https://hardikshah91.github.io/PWA/">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<script>
-		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker
-				.register('./service-worker.js')
-				.then(function() {
-					console.log('Service Worker Registered');
-				});
-		}
-	</script>
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+
 </head>
 
 <body>

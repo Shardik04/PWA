@@ -1,8 +1,8 @@
-var cacheName = 'staticPWA';
+var cacheName = 'staticPWA-v1';
 var filesToCache = [
   '/',
-  'index.html',
-  'assets/css/main.css',
+  '/index.html',
+  '/assets/css/main.css',
   '/assets/images/thumbs/01.jpg',
   '/assets/images/thumbs/02.jpg',
   '/assets/images/thumbs/03.jpg',
