@@ -1,3 +1,4 @@
+'use strict';
 var cacheName = 'staticPWA-v1';
 var filesToCache = [
   '/',
