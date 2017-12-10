@@ -19,7 +19,7 @@ self.addEventListener('install', function(event) {
         '/images/thumbs/08.jpg'
       ]);
       console.log("DONE");
-    });
+    })
   );
 });
 
