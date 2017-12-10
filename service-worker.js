@@ -1,8 +1,8 @@
 var cacheName = 'staticPWA-v1';
 
-self.addEventListener('install', function(e) {
+self.addEventListener('install', function(event) {
   console.log('[ServiceWorker] Install');
-  e.waitUntil(
+  event.waitUntil(
     caches.open(cacheName).then(function(cache) {
       console.log('[ServiceWorker] Caching app shell');
       return cache.add([
@@ -19,7 +19,10 @@ self.addEventListener('install', function(e) {
         '/images/thumbs/08.jpg'
       ]);
       console.log("DONE");
-    })
+    }).catch(function(error) {
+      // registration failed
+      console.log('cache failed with ' + error);
+    });
   );
 });
 
