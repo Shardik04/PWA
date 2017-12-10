@@ -14,8 +14,7 @@ var filesToCache = [
   '/assets/images/thumbs/05.jpg',
   '/assets/images/thumbs/06.jpg',
   '/assets/images/thumbs/07.jpg',
-  '/assets/images/thumbs/08.jpg',
-  '/assets/images/favicon-32x32.png'
+  '/assets/images/thumbs/08.jpg'
 ];
 
 self.addEventListener('install', function(e) {
