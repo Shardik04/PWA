@@ -1,4 +1,17 @@
 var cacheName = 'staticPWA-v1';
+var filesToCache = [
+  '/',
+  '/index.html',
+  '/assets/css/main.css',
+  '/images/thumbs/01.jpg',
+  '/images/thumbs/02.jpg',
+  '/images/thumbs/03.jpg',
+  '/images/thumbs/04.jpg',
+  '/images/thumbs/05.jpg',
+  '/images/thumbs/06.jpg',
+  '/images/thumbs/07.jpg',
+  '/images/thumbs/08.jpg'
+];
 
 self.addEventListener('install', function(event) {
   console.log('[ServiceWorker] Install');
@@ -6,19 +19,7 @@ self.addEventListener('install', function(event) {
     if ('caches' in window) {
       caches.open(cacheName).then(function(cache) {
         console.log('[ServiceWorker] Caching app shell');
-        return cache.add([
-          '/',
-          '/index.html',
-          '/assets/css/main.css',
-          '/images/thumbs/01.jpg',
-          '/images/thumbs/02.jpg',
-          '/images/thumbs/03.jpg',
-          '/images/thumbs/04.jpg',
-          '/images/thumbs/05.jpg',
-          '/images/thumbs/06.jpg',
-          '/images/thumbs/07.jpg',
-          '/images/thumbs/08.jpg'
-        ]);
+        return cache.addAll(filesToCache);
         console.log("DONE");
       })
     } else {
